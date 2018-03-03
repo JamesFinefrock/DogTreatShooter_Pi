@@ -1,8 +1,11 @@
-# bluetooth low energy scan
-from bluetooth.ble import DiscoveryService
+from bluetooth.ble import BeaconService
+import time
 
-service = DiscoveryService()
-devices = service.discover(2)
+service = BeaconService()
 
-for address, name in devices.items():
-        print("name: {}, address: {}".format(name, address))
+service.start_advertising("11111111-2222-3333-4444-555555555555",
+                    1, 1, 1, 200)
+time.sleep(15)
+service.stop_advertising()
+
+print("Done.")
