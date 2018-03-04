@@ -8,12 +8,14 @@ p = GPIO.PWM(7,50)
 p.start(7.5)
 
 try:
-	while True:
+        i = 0
+	while i < 2:
 		p.ChangeDutyCycle(7.5)
 		time.sleep(1)
 		p.ChangeDutyCycle(12.5)
 		time.sleep(1)
 		p.ChangeDutyCycle(2.5)
 		time.sleep(1)
+                i = i + 1
 except KeyboardInterrupt:
 	GPIO.cleanup()
