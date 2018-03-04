@@ -8,11 +8,11 @@ p = GPIO.PWM(7,50)
 p.start(0)
 
 
-time.sleep(2)
-p.ChangeDutyCycle(25)
-time.sleep(2)
-p.ChangeDutyCycle(0)
-time.sleep(2)
+#time.sleep(2)
+#p.ChangeDutyCycle(25)
+#time.sleep(2)
+#p.ChangeDutyCycle(0)
+#time.sleep(2)
   
 
 GPIO.cleanup()
