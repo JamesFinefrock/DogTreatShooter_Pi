@@ -9,9 +9,9 @@ p.start(7.5)
 
 
 time.sleep(2)
-p.changeDutyCycle(50)
+p.ChangeDutyCycle(50)
 time.sleep(2)
-p.changeDutyCycle(7.5)
+p.ChangeDutyCycle(7.5)
   
 
 GPIO.cleanup()
