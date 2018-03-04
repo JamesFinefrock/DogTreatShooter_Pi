@@ -1,5 +1,7 @@
 #!/usr/bin/env python3
 
+import subprocess
+
 import dbus
 import dbus.exceptions
 import dbus.mainloop.glib
@@ -471,6 +473,8 @@ class TestCharacteristic(Characteristic):
     def WriteValue(self, value, options):
         print('TestCharacteristic Write: ' + repr(value))
         self.value = value
+        subprocess.call("python servoTest.py", shell=True)
+        self.value = [0]
 
 
 class TestDescriptor(Descriptor):
